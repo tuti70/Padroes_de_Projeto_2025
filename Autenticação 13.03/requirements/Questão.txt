@@ -1,0 +1,26 @@
+-Criar uma interface Fornecedor
+-As classaes Engenheiro, Diretor e Gerente devem implementar a interface Fornecedor
+-Os metodos dessa interace e ó metodo 
+    - Realizar pedido
+-Criar a interface Departamento
+-As classaes Diretor e Gerente devem implementar a interface Departamento
+-Os metodos da interace Departamento são
+    - Criar Departamento    
+    - Cadastrar funcionario
+-Criar a classe Pessoa
+-Criar 5 attributes
+    - Nome
+    - Idade
+    - Sexo
+    - Endereço
+    - Telefone
+-Cirar 5 metodos
+    - Cadastrar
+    - Atualizar
+    - Excluir
+    - Listar
+    - Buscar
+-Pelo menos 2 desses métodos dever ser abstratos
+-A classe Pessoa e a SuperClasse CLiente
+-implementar os metodos em Cliente(Pode ser apenas a impressão dos valores)
+-Fazer um Uml dessa nova aplicação
