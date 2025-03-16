@@ -1,0 +1,8 @@
+Fazer uma implementação em uma linguagem Orientada a Objetos para cada princípio de programação SOLID. a implementação 
+inicialmente deve apresentar o código em desacordo com o princípio. Você deve mostrar o que está ferindo o princípio, 
+explicando por meio de comentários no código e depois deve apresentar o código corrigido e que esteja de acordo com o princípio. 
+O código incorreto deve ser colocado numa classe e o código correto em outra classe. A aplicação deve ser submetido ao Github e o 
+link deve ser colocado no arquivo em PDF.
+
+No arquivo PDF deve ser colocado um relatório explicando o que faz cada código implementado e seu respectivo princípio. 
+A explicação deve conter o porquê uma classe "errada" viola o princípio e oo porquê a "classe certa" não viola o princípio.
