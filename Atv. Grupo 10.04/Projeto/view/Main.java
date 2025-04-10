@@ -64,7 +64,7 @@ public class Main {
                         scanner.close();
                         System.exit(0);
 
-                    case 6: // Adicione esta opção
+                    case 6: 
                         userDAO.printAllUsers();
                         break;
                     

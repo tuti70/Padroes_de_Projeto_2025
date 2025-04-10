@@ -1,4 +1,4 @@
 -Faça uma aplicação que utilize os padrões MVC, DAO e BO com seu respectivo UML.
- 
+
 -Grave um vídeo de 10 a 20 minutos explicando o código e como o padrão se enquadra 
 dentro da aplicação. O Banco de dados pode ser simulado em um arquivo.

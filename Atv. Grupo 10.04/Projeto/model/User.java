@@ -14,7 +14,6 @@ public class User implements Serializable {
         this.email = email;
     }
     
-    // Getters e Setters
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
     
