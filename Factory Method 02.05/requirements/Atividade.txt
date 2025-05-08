@@ -1,0 +1,44 @@
+Utilizar o Padrão Factory Method para criar retratar o seguinte cenário:
+
+Existem fábricas de produtos esportivos: Nike, Adidas, Puma, Umbro e Kappa e cada 
+uma delas possui produtos como Camisas Esportivas de Times
+
+Camisas Esportivas:
+
+Nike -> Brasil
+
+Adidas -> Flamengo
+
+Puma -> Botafogo
+
+Umbro -> Fluminense
+
+Kappa -> Vasco
+
+Crie uma aplicação utilizando o padrão Factory Method de forma que o cliente 
+(main) possa escolher um determinado produto de uma determinada fábrica esportiva. 
+O Usuário escolhe o time e são impressos dados do time e da fábrica.
+
+O UML deve ser feito no Draw IO ou semelhante e colocado no arquivo PDF 
+juntamente com do GitHub.
+
+src/
+└── main/
+    └── java/
+        └── com/
+            └── fabricas/
+                ├── esportivos/
+                │   ├── CamisaBrasil.java
+                │   ├── CamisaFlamengo.java
+                │   ├── CamisaBotafogo.java
+                │   ├── CamisaFluminense.java
+                │   ├── CamisaVasco.java
+                │   └── CamisaEsportiva.java
+                ├── fabricas/
+                │   ├── FabricaEsportiva.java
+                │   ├── Nike.java
+                │   ├── Adidas.java
+                │   ├── Puma.java
+                │   ├── Umbro.java
+                │   └── Kappa.java
+                └── Main.java
