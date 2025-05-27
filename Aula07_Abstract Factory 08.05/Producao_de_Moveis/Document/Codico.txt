@@ -1,0 +1,117 @@
+// Interface para móveis
+interface Movel {
+    void montar();
+    void estilo();
+}
+
+// Interfaces para tipos específicos de móveis
+interface Cadeira extends Movel {}
+interface Mesa extends Movel {}
+
+// Implementações concretas de cadeiras
+class CadeiraModerna implements Cadeira {
+    @Override
+    public void montar() {
+        System.out.println("Montando cadeira moderna com parafusos invisíveis");
+    }
+
+    @Override
+    public void estilo() {
+        System.out.println("Cadeira no estilo moderno: linhas retas e cores neutras");
+    }
+}
+
+class CadeiraRustica implements Cadeira {
+    @Override
+    public void montar() {
+        System.out.println("Montando cadeira rústica com encaixes de madeira");
+    }
+
+    @Override
+    public void estilo() {
+        System.out.println("Cadeira no estilo rústico: madeira aparente e acabamento envelhecido");
+    }
+}
+
+// Implementações concretas de mesas
+class MesaModerna implements Mesa {
+    @Override
+    public void montar() {
+        System.out.println("Montando mesa moderna com estrutura metálica");
+    }
+
+    @Override
+    public void estilo() {
+        System.out.println("Mesa no estilo moderno: vidro temperado e base cromada");
+    }
+}
+
+class MesaRustica implements Mesa {
+    @Override
+    public void montar() {
+        System.out.println("Montando mesa rústica com tábuas de madeira maciça");
+    }
+
+    @Override
+    public void estilo() {
+        System.out.println("Mesa no estilo rústico: madeira reciclada e ferragens aparentes");
+    }
+}
+
+// Interface da fábrica abstrata
+interface FabricaMoveis {
+    Cadeira criarCadeira();
+    Mesa criarMesa();
+}
+
+// Fábricas concretas
+class FabricaModerna implements FabricaMoveis {
+    @Override
+    public Cadeira criarCadeira() {
+        return new CadeiraModerna();
+    }
+
+    @Override
+    public Mesa criarMesa() {
+        return new MesaModerna();
+    }
+}
+
+class FabricaRustica implements FabricaMoveis {
+    @Override
+    public Cadeira criarCadeira() {
+        return new CadeiraRustica();
+    }
+
+    @Override
+    public Mesa criarMesa() {
+        return new MesaRustica();
+    }
+}
+
+// Cliente
+public class MainMoveis {
+    public static void main(String[] args) {
+        // Criando fábrica de móveis modernos
+        FabricaMoveis fabricaModerna = new FabricaModerna();
+        Cadeira cadeiraModerna = fabricaModerna.criarCadeira();
+        Mesa mesaModerna = fabricaModerna.criarMesa();
+        
+        System.out.println("Móveis Modernos:");
+        cadeiraModerna.montar();
+        cadeiraModerna.estilo();
+        mesaModerna.montar();
+        mesaModerna.estilo();
+        
+        // Criando fábrica de móveis rústicos
+        FabricaMoveis fabricaRustica = new FabricaRustica();
+        Cadeira cadeiraRustica = fabricaRustica.criarCadeira();
+        Mesa mesaRustica = fabricaRustica.criarMesa();
+        
+        System.out.println("\nMóveis Rústicos:");
+        cadeiraRustica.montar();
+        cadeiraRustica.estilo();
+        mesaRustica.montar();
+        mesaRustica.estilo();
+    }
+}

@@ -1,0 +1,68 @@
+Atividade EaD: Implementação do Padrão de Projeto Adapter. Nesta atividade, você irá implementar o padrão de projeto Adapter para integrar duas bibliotecas incompatíveis em uma aplicação simples. 
+O objetivo é permitir que uma classe existente possa ser utilizada como se implementasse uma interface específica, mesmo que essa classe não tenha sido projetada para tal. Você está 
+desenvolvendo um sistema de gerenciamento de dados para uma empresa de logística. A empresa possui uma biblioteca legada que lida com o armazenamento de dados de veículos 
+em um formato específico, mas deseja adotar uma nova biblioteca que usa um formato diferente e mais eficiente.
+
+Detalhes Técnicos
+
+1. Biblioteca Legada (OldVehicleLibrary):
+
+    - Classe: OldVehicleStorage
+
+    - Método: storeVehicleData(String data)
+
+2. Nova Biblioteca (NewVehicleLibrary):
+
+    - Interface: IVehicleStorage
+
+    - Método: void saveVehicleData(Vehicle vehicle)
+
+3. Classe Vehicle:
+
+    public class Vehicle {
+
+        private String id;
+
+        private String model;
+
+        private int year;
+
+        // Construtores, getters e setters
+
+    }
+
+Passos para a resolução da atividade:
+
+1. Crie a Classe Adapter:
+
+    - Crie uma classe VehicleStorageAdapter que implemente a interface IVehicleStorage.
+
+    - Dentro dessa classe, adapte o método storeVehicleData da classe OldVehicleStorage para que ele possa ser chamado através do método saveVehicleData da interface IVehicleStorage.
+
+2. Implemente a Lógica de Adaptação:
+
+    - Converta os dados do objeto Vehicle para o formato esperado pelo método storeVehicleData da classe OldVehicleStorage.
+
+    - Certifique-se de que todas as informações relevantes do objeto Vehicle sejam incluídas na string a ser armazenada.
+
+3. Demonstre a Integração:
+
+    - Crie um método main que demonstre a utilização do VehicleStorageAdapter para armazenar dados de um veículo usando a biblioteca legada através da nova interface.
+
+Entrega no GitHub
+
+1. Código-fonte completo das classes VehicleStorageAdapter, Vehicle, OldVehicleStorage e da classe de teste.
+
+2. Um documento explicativo (1-2 páginas) descrevendo como você implementou o padrão Adapter, incluindo quaisquer desafios encontrados e como você os resolveu.
+
+Avaliação
+
+Você será avaliado com base nos seguintes critérios:
+
+- Correção e funcionamento do código.
+
+- Uso apropriado do padrão Adapter.
+
+- Clareza e qualidade do código.
+
+- Qualidade do documento explicativo.

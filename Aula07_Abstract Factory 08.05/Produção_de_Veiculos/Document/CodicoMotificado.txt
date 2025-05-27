@@ -1,0 +1,110 @@
+// Adicionando nova interface para caminhões
+interface Caminhao extends Veiculo {
+    void carregar();
+}
+
+// Implementações concretas de caminhões
+class CaminhaoEletrico implements Caminhao {
+    @Override
+    public void acelerar() {
+        System.out.println("Caminhão elétrico acelerando com torque máximo");
+    }
+
+    @Override
+    public void frear() {
+        System.out.println("Caminhão elétrico freando com sistema regenerativo");
+    }
+
+    @Override
+    public void carregar() {
+        System.out.println("Caminhão elétrico carregando baterias");
+    }
+}
+
+class CaminhaoCombustao implements Caminhao {
+    @Override
+    public void acelerar() {
+        System.out.println("Caminhão a diesel acelerando com fumaça");
+    }
+
+    @Override
+    public void frear() {
+        System.out.println("Caminhão a diesel freando com sistema a ar");
+    }
+
+    @Override
+    public void carregar() {
+        System.out.println("Caminhão a diesel abastecendo tanque");
+    }
+}
+
+// Modificando a interface da fábrica abstrata
+interface FabricaVeiculos {
+    Carro criarCarro();
+    Moto criarMoto();
+    Caminhao criarCaminhao();
+}
+
+// Modificando as fábricas concretas
+class FabricaEletrica implements FabricaVeiculos {
+    @Override
+    public Carro criarCarro() {
+        return new CarroEletrico();
+    }
+
+    @Override
+    public Moto criarMoto() {
+        return new MotoEletrica();
+    }
+
+    @Override
+    public Caminhao criarCaminhao() {
+        return new CaminhaoEletrico();
+    }
+}
+
+class FabricaCombustao implements FabricaVeiculos {
+    @Override
+    public Carro criarCarro() {
+        return new CarroCombustao();
+    }
+
+    @Override
+    public Moto criarMoto() {
+        return new MotoCombustao();
+    }
+
+    @Override
+    public Caminhao criarCaminhao() {
+        return new CaminhaoCombustao();
+    }
+}
+
+// Cliente modificado
+public class Main {
+    public static void main(String[] args) {
+        // Criando fábrica de veículos elétricos
+        FabricaVeiculos fabricaEletrica = new FabricaEletrica();
+        Carro carroEletrico = fabricaEletrica.criarCarro();
+        Moto motoEletrica = fabricaEletrica.criarMoto();
+        Caminhao caminhaoEletrico = fabricaEletrica.criarCaminhao();
+        
+        System.out.println("Veículos Elétricos:");
+        carroEletrico.acelerar();
+        motoEletrica.acelerar();
+        caminhaoEletrico.acelerar();
+        caminhaoEletrico.carregar();
+        
+        // Criando fábrica de veículos a combustão
+        FabricaVeiculos fabricaCombustao = new FabricaCombustao();
+        Carro carroCombustao = fabricaCombustao.criarCarro();
+        Moto motoCombustao = fabricaCombustao.criarMoto();
+        Caminhao caminhaoCombustao = fabricaCombustao.criarCaminhao();
+        
+        System.out.println("\nVeículos a Combustão:");
+        carroCombustao.acelerar();
+        motoCombustao.acelerar();
+        caminhaoCombustao.acelerar();
+        caminhaoCombustao.carregar();
+    }
+}

@@ -1,0 +1,2 @@
+interface Moto extends Veiculo {
+}

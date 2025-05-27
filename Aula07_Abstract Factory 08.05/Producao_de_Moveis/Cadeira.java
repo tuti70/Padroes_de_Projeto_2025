@@ -1,0 +1,2 @@
+interface Cadeira extends Movel {
+}

@@ -1,0 +1,2 @@
+interface Mesa extends Movel {
+}

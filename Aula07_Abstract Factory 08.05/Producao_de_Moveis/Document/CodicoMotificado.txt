@@ -1,0 +1,179 @@
+// Adicionando nova interface para sofás
+interface Sofa extends Movel {
+    void conforto();
+}
+
+// Implementações concretas de sofás
+class SofaModerno implements Sofa {
+    @Override
+    public void montar() {
+        System.out.println("Montando sofá moderno com estrutura modular");
+    }
+
+    @Override
+    public void estilo() {
+        System.out.println("Sofá no estilo moderno: couro sintético e formas geométricas");
+    }
+
+    @Override
+    public void conforto() {
+        System.out.println("Conforto moderno: firmeza média com apoio lombar");
+    }
+}
+
+class SofaRustico implements Sofa {
+    @Override
+    public void montar() {
+        System.out.println("Montando sofá rústico com estrutura de madeira maciça");
+    }
+
+    @Override
+    public void estilo() {
+        System.out.println("Sofá no estilo rústico: tecido natural e almofadas artesanais");
+    }
+
+    @Override
+    public void conforto() {
+        System.out.println("Conforto rústico: maciez acolhedora com aspecto caseiro");
+    }
+}
+
+class SofaIndustrial implements Sofa {
+    @Override
+    public void montar() {
+        System.out.println("Montando sofá industrial com estrutura metálica exposta");
+    }
+
+    @Override
+    public void estilo() {
+        System.out.println("Sofá no estilo industrial: couro envelhecido e tubos aparentes");
+    }
+
+    @Override
+    public void conforto() {
+        System.out.println("Conforto industrial: firmeza elevada com design minimalista");
+    }
+}
+
+// Implementações concretas para estilo industrial
+class CadeiraIndustrial implements Cadeira {
+    @Override
+    public void montar() {
+        System.out.println("Montando cadeira industrial com parafusos aparentes");
+    }
+
+    @Override
+    public void estilo() {
+        System.out.println("Cadeira no estilo industrial: metal e madeira com acabamento bruto");
+    }
+}
+
+class MesaIndustrial implements Mesa {
+    @Override
+    public void montar() {
+        System.out.println("Montando mesa industrial com dobradiças expostas");
+    }
+
+    @Override
+    public void estilo() {
+        System.out.println("Mesa no estilo industrial: concreto e aço com superfície rústica");
+    }
+}
+
+// Modificando a interface da fábrica abstrata
+interface FabricaMoveis {
+    Cadeira criarCadeira();
+    Mesa criarMesa();
+    Sofa criarSofa();
+}
+
+// Fábricas concretas existentes modificadas
+class FabricaModerna implements FabricaMoveis {
+    @Override
+    public Cadeira criarCadeira() {
+        return new CadeiraModerna();
+    }
+
+    @Override
+    public Mesa criarMesa() {
+        return new MesaModerna();
+    }
+
+    @Override
+    public Sofa criarSofa() {
+        return new SofaModerno();
+    }
+}
+
+class FabricaRustica implements FabricaMoveis {
+    @Override
+    public Cadeira criarCadeira() {
+        return new CadeiraRustica();
+    }
+
+    @Override
+    public Mesa criarMesa() {
+        return new MesaRustica();
+    }
+
+    @Override
+    public Sofa criarSofa() {
+        return new SofaRustico();
+    }
+}
+
+// Nova fábrica concreta
+class FabricaIndustrial implements FabricaMoveis {
+    @Override
+    public Cadeira criarCadeira() {
+        return new CadeiraIndustrial();
+    }
+
+    @Override
+    public Mesa criarMesa() {
+        return new MesaIndustrial();
+    }
+
+    @Override
+    public Sofa criarSofa() {
+        return new SofaIndustrial();
+    }
+}
+
+// Cliente modificado
+public class MainMoveis {
+    public static void main(String[] args) {
+        // Criando fábrica de móveis modernos
+        FabricaMoveis fabricaModerna = new FabricaModerna();
+        Cadeira cadeiraModerna = fabricaModerna.criarCadeira();
+        Mesa mesaModerna = fabricaModerna.criarMesa();
+        Sofa sofaModerno = fabricaModerna.criarSofa();
+        
+        System.out.println("Móveis Modernos:");
+        cadeiraModerna.montar();
+        mesaModerna.estilo();
+        sofaModerno.conforto();
+        
+        // Criando fábrica de móveis rústicos
+        FabricaMoveis fabricaRustica = new FabricaRustica();
+        Cadeira cadeiraRustica = fabricaRustica.criarCadeira();
+        Mesa mesaRustica = fabricaRustica.criarMesa();
+        Sofa sofaRustico = fabricaRustica.criarSofa();
+        
+        System.out.println("\nMóveis Rústicos:");
+        cadeiraRustica.montar();
+        mesaRustica.estilo();
+        sofaRustico.conforto();
+        
+        // Criando nova fábrica de móveis industriais
+        FabricaMoveis fabricaIndustrial = new FabricaIndustrial();
+        Cadeira cadeiraIndustrial = fabricaIndustrial.criarCadeira();
+        Mesa mesaIndustrial = fabricaIndustrial.criarMesa();
+        Sofa sofaIndustrial = fabricaIndustrial.criarSofa();
+        
+        System.out.println("\nMóveis Industriais:");
+        cadeiraIndustrial.estilo();
+        mesaIndustrial.montar();
+        sofaIndustrial.conforto();
+    }
+}

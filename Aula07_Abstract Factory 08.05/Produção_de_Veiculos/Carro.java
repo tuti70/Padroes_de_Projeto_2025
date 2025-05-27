@@ -1,0 +1,2 @@
+interface Carro extends Veiculo {
+}

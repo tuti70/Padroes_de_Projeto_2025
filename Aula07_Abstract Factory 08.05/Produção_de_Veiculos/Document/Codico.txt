@@ -1,0 +1,117 @@
+// Interface para veículos
+interface Veiculo {
+    void acelerar();
+    void frear();
+}
+
+// Interfaces para tipos específicos de veículos
+interface Carro extends Veiculo {}
+interface Moto extends Veiculo {}
+
+// Implementações concretas de carros
+class CarroEletrico implements Carro {
+    @Override
+    public void acelerar() {
+        System.out.println("Carro elétrico acelerando silenciosamente");
+    }
+
+    @Override
+    public void frear() {
+        System.out.println("Carro elétrico freando com regeneração de energia");
+    }
+}
+
+class CarroCombustao implements Carro {
+    @Override
+    public void acelerar() {
+        System.out.println("Carro a combustão acelerando com barulho do motor");
+    }
+
+    @Override
+    public void frear() {
+        System.out.println("Carro a combustão freando com desgaste de pastilhas");
+    }
+}
+
+// Implementações concretas de motos
+class MotoEletrica implements Moto {
+    @Override
+    public void acelerar() {
+        System.out.println("Moto elétrica acelerando instantaneamente");
+    }
+
+    @Override
+    public void frear() {
+        System.out.println("Moto elétrica freando suavemente");
+    }
+}
+
+class MotoCombustao implements Moto {
+    @Override
+    public void acelerar() {
+        System.out.println("Moto a combustão acelerando com ronco do escapamento");
+    }
+
+    @Override
+    public void frear() {
+        System.out.println("Moto a combustão freando com disco dianteiro");
+    }
+}
+
+// Interface da fábrica abstrata
+interface FabricaVeiculos {
+    Carro criarCarro();
+    Moto criarMoto();
+}
+
+// Fábricas concretas
+class FabricaEletrica implements FabricaVeiculos {
+    @Override
+    public Carro criarCarro() {
+        return new CarroEletrico();
+    }
+
+    @Override
+    public Moto criarMoto() {
+        return new MotoEletrica();
+    }
+}
+
+class FabricaCombustao implements FabricaVeiculos {
+    @Override
+    public Carro criarCarro() {
+        return new CarroCombustao();
+    }
+
+    @Override
+    public Moto criarMoto() {
+        return new MotoCombustao();
+    }
+}
+
+// Cliente
+public class Main {
+    public static void main(String[] args) {
+        // Criando fábrica de veículos elétricos
+        FabricaVeiculos fabricaEletrica = new FabricaEletrica();
+        Carro carroEletrico = fabricaEletrica.criarCarro();
+        Moto motoEletrica = fabricaEletrica.criarMoto();
+        
+        System.out.println("Veículos Elétricos:");
+        carroEletrico.acelerar();
+        carroEletrico.frear();
+        motoEletrica.acelerar();
+        motoEletrica.frear();
+        
+        // Criando fábrica de veículos a combustão
+        FabricaVeiculos fabricaCombustao = new FabricaCombustao();
+        Carro carroCombustao = fabricaCombustao.criarCarro();
+        Moto motoCombustao = fabricaCombustao.criarMoto();
+        
+        System.out.println("\nVeículos a Combustão:");
+        carroCombustao.acelerar();
+        carroCombustao.frear();
+        motoCombustao.acelerar();
+        motoCombustao.frear();
+    }
+}
