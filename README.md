@@ -3,7 +3,7 @@
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
 
-Repositório acadêmico para a disciplina de Padrões de Projeto do 5º período do curso de Tecnologia em Sistemas para Internet.
+Repositório acadêmico para a disciplina de Padrões de Projeto do curso de Tecnologia em Sistemas para Internet.
 
 ## 📋 Informações do Curso
 
@@ -11,8 +11,8 @@ Repositório acadêmico para a disciplina de Padrões de Projeto do 5º período
 |-------|-----------|
 | Tecnologia em Sistemas para Internet | 2025 |
 
-| DISCIPLINA | PERÍODO |
-|------------|---------|
+| DISCIPLINA |
+|------------|
 | Padrões de Projetos |
 
 **Professor:** Fernando Barbosa Matos
@@ -38,7 +38,12 @@ Este repositório contém as atividades práticas desenvolvidas em Java durante 
 - Git/GitHub
 - Maven (se aplicável)
 
-
+  
+## 👨‍💻 Sobre o Autor
+**Aluno:** Arthur Renato Normando Vasconcelos  
+**Email:** arthur.renato.nv@gmail.com  
+**LinkedIn:** [Arthur Renato NV](https://www.linkedin.com/in/arthur-renato-nv/)  
+**Última atualização:** Maio/2025  
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/arthur-renato-nv/)
 
 ## 📝 Como Executar os Projetos
@@ -46,8 +51,3 @@ Este repositório contém as atividades práticas desenvolvidas em Java durante 
 1. Clone o repositório:
 ```bash
 git clone https://github.com/seu-usuario/Padroes_de_Projeto_2025.git
-
-**Aluno:** Arthur Renato Normando Vasconcelos  
-**Email:** arthur.renato.nv@gmail.com  
-**LinkedIn:** [Arthur Renato NV](https://www.linkedin.com/in/arthur-renato-nv/)  
-**Última atualização:** Maio/2025  
