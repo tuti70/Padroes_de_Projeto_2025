@@ -1,0 +1,44 @@
+Implementação do Padrão Adapter
+Objetivo: O padrão Adapter foi implementado para permitir que o sistema legado OldVehicleStorage possa ser utilizado 
+através da interface moderna IVehicleStorage, sem modificar o código existente da biblioteca legada.
+
+Implementação:
+
+Adaptação de Interface:
+
+Criamos a classe VehicleStorageAdapter que implementa a interface moderna IVehicleStorage.
+
+O adapter recebe uma instância do OldVehicleStorage no construtor.
+
+Conversão de Dados:
+
+Implementamos o método saveVehicleData na classe adapter, que converte o objeto Vehicle para o 
+formato de string esperado pelo método legado storeVehicleData.
+
+A conversão é feita pelo método privado convertVehicleToLegacyFormat, que concatena os campos do 
+veículo separados por pipes ("|").
+
+Desafios e Soluções:
+
+Diferença de Formatos:
+
+Desafio: O sistema legado espera uma string simples, enquanto a nova interface trabalha com objetos complexos.
+
+Solução: Implementamos a conversão dos campos do objeto para um formato de string compatível.
+
+Manutenção de Código Legado:
+
+Desafio: Não queríamos modificar o código legado existente para evitar introduzir bugs.
+
+Solução: O padrão Adapter permite encapsular toda a lógica de adaptação sem alterar o código original.
+
+Vantagens da Implementação:
+
+Baixo Acoplamento: O código cliente só depende da interface moderna, não do sistema legado.
+
+Reusabilidade: O adapter pode ser usado em qualquer parte do sistema que precise da interface moderna.
+
+Extensibilidade: Fácil de adicionar novos adapters para outras bibliotecas legadas.
+
+Conclusão: O padrão Adapter mostrou-se ideal para esta situação, permitindo a integração harmoniosa entre 
+sistemas novos e legados, mantendo a consistência e evitando modificações em código já testado e validado.

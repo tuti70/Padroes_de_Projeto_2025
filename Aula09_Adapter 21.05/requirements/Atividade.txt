@@ -1,7 +1,10 @@
-Atividade EaD: Implementação do Padrão de Projeto Adapter. Nesta atividade, você irá implementar o padrão de projeto Adapter para integrar duas bibliotecas incompatíveis em uma aplicação simples. 
-O objetivo é permitir que uma classe existente possa ser utilizada como se implementasse uma interface específica, mesmo que essa classe não tenha sido projetada para tal. Você está 
-desenvolvendo um sistema de gerenciamento de dados para uma empresa de logística. A empresa possui uma biblioteca legada que lida com o armazenamento de dados de veículos 
-em um formato específico, mas deseja adotar uma nova biblioteca que usa um formato diferente e mais eficiente.
+Atividade EaD: Implementação do Padrão de Projeto Adapter. Nesta atividade, você irá implementar o 
+padrão de projeto Adapter para integrar duas bibliotecas incompatíveis em uma aplicação simples. 
+O objetivo é permitir que uma classe existente possa ser utilizada como se implementasse uma interface 
+específica, mesmo que essa classe não tenha sido projetada para tal. Você está 
+desenvolvendo um sistema de gerenciamento de dados para uma empresa de logística. A empresa possui 
+uma biblioteca legada que lida com o armazenamento de dados de veículos 
+em um formato específico, mas deseja adotar uma nova biblioteca que usa um formato diferente e mais meficiente.
 
 Detalhes Técnicos
 
@@ -66,3 +69,14 @@ Você será avaliado com base nos seguintes critérios:
 - Clareza e qualidade do código.
 
 - Qualidade do documento explicativo.
+
+
+├── adapter/
+│   ├── VehicleStorageAdapter.java
+├── legacy/
+│   ├── OldVehicleStorage.java
+├── modern/
+│   ├── IVehicleStorage.java
+│   ├── Vehicle.java
+├── demo/
+│   ├── AdapterDemo.java
