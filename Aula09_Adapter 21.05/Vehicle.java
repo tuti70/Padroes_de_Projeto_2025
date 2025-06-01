@@ -1,5 +1,3 @@
-package modern;
-
 public class Vehicle {
     private String id;
     private String model;

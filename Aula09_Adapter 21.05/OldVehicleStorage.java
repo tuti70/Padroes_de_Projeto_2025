@@ -1,4 +1,3 @@
-package legacy;
 
 public class OldVehicleStorage {
     public void storeVehicleData(String data) {

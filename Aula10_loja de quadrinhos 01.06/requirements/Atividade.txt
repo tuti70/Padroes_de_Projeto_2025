@@ -1,0 +1,15 @@
+Desenvolva uma aplicação para uma loja de quadrinhos que promove para seus clientes uma caixa de assinatura com diversos itens, de acordo com o nível desse cliente.
+
+- Bronze: 3 itens
+
+- Prata: 5 itens
+
+- Ouro: 7 itens
+
+- Platina: 10 itens
+
+Os itens que podem ser incluídos na caixa são: quadrinhos(R$ 15,00), chaveiros(R$ 5,00), bustos(R$ 10,00), adesivos(R$ 1,00),  posters(R$ 25,00), camisetas(R$ 25,00), canetas(R$ 3,00), miniaturas(R$ 20,00).
+
+Cada caixa pode ter 1 ou mais itens de um mesmo tipo, até o limite de itens de cada caixa de acordo com a categoria do cliente. Cada item possui um valor. e são colocados na caixa de maneira ALEATÓRIA.
+
+Deve ser apresentado os itens presentes em uma caixa, assim como o valor total da caixa.

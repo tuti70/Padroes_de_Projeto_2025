@@ -1,8 +1,3 @@
-package adapter;
-
-import legacy.OldVehicleStorage;
-import modern.IVehicleStorage;
-import modern.Vehicle;
 
 public class VehicleStorageAdapter implements IVehicleStorage {
     private OldVehicleStorage oldVehicleStorage;

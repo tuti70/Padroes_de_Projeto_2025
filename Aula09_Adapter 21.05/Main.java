@@ -1,10 +1,5 @@
-package demo;
 
-import adapter.VehicleStorageAdapter;
-import legacy.OldVehicleStorage;
-import modern.Vehicle;
-
-public class AdapterDemo {
+public class Main {
     public static void main(String[] args) {
         // Criar instância do sistema legado
         OldVehicleStorage legacyStorage = new OldVehicleStorage();
