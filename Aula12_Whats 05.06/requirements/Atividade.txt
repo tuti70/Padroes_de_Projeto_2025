@@ -1,0 +1,1 @@
+Utilizar o arquivo de apoio para implementar a nova funcionalidade (Mensagem por Whatsapp)
