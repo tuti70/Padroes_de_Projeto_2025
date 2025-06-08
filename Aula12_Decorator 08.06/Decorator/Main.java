@@ -13,6 +13,7 @@ public class Main {
 
         if (!resposta.equalsIgnoreCase("S")) {
             System.out.println("Obrigado por visitar nosso serviço!");
+            scanner.close();
             return;
         }
 
