@@ -27,11 +27,11 @@ public class Main {
     }
 
     private static List<Usuario> criarUsuarios() {
-        Usuario usuario1 = new Usuario("João", Arrays.asList("Ação", "Ficção Científica"));
-        Usuario usuario2 = new Usuario("Maria", Arrays.asList("Comédia", "Terror"));
-        Usuario usuario3 = new Usuario("Carlos", Arrays.asList("Anime", "Ação"));
-        Usuario usuario4 = new Usuario("Ana", Arrays.asList("Romance", "Drama"));
-        Usuario usuario5 = new Usuario("Pedro", Arrays.asList("Ficção Científica", "Terror", "Ação"));
+        Usuario usuario1 = new Usuario("Arthur Renato ", Arrays.asList("Ação", "Ficção Científica"));
+        Usuario usuario2 = new Usuario("Beatriz Marques", Arrays.asList("Comédia", "Terror"));
+        Usuario usuario3 = new Usuario("Pedro Sergio", Arrays.asList("Anime", "Ação"));
+        Usuario usuario4 = new Usuario("Yan Lemke", Arrays.asList("Romance", "Drama"));
+        Usuario usuario5 = new Usuario("Joselio Francisco", Arrays.asList("Ficção Científica", "Terror", "Ação"));
 
         return Arrays.asList(usuario1, usuario2, usuario3, usuario4, usuario5);
     }
