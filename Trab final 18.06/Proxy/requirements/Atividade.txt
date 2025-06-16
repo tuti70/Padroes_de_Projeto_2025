@@ -1,0 +1,24 @@
+Enviar o Link do Vídeo e do GitHub e dos padrões escolhidos aqui até o dia 18/06Tarefa
+1) Enviar o Link do Repositório do GitHub do padrão Criacional, UML e Link do vídeo.
+
+2) Enviar o Link do Repositório do GitHub do padrão Estrutural, UML e Link do vídeo.
+
+3) Enviar o Link do Repositório do GitHub do padrão Comportamental, UML e Link do vídeo.
+
+Os padrões disponíveis para escolha são:
+
+- Criacionais (Builder)
+
+- Estruturais (Bridge, Flyweight e Proxy)
+
+-Comportamental (Command, Interpreter, Mediator, Memento, State, Strategy)
+
+Observações: 
+
+- O grupo de no máximo 3 alunos. 
+
+- Todos do grupo devem participar da gravação do vídeo. 
+
+- Para cada padrão, o vídeo deve ter no mínimo 10 min e no máximo 20 min.
+
+- O vídeo deve conter a explicação do padrão, apresentação de um exemplo com a respectiva UML e um a implementação.
